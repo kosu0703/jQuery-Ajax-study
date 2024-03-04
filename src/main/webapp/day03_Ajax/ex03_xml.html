@@ -20,7 +20,7 @@
 					
 					let table = "<table>";
 					table += "<thead>";
-					table += "<tr><th>이름</th><th>개수</th></tr>";
+					table += "<tr><th>회사</th><th>이름</th><th>개수</th></tr>";
 					table += "</thead>";
 					table += "<tbody>";
 					
@@ -29,13 +29,15 @@
 					
 					//	$.get(서버url, function(data){})
 					//						** data => 서버에서 가져온 데이터
-					$.get("data02.xml", function(data) {
+					$.get("data03.xml", function(data) {
 						//	가지고온 데이터가 xml 이므로 find 원하는 태그를 찾을 수 있다.
 						//	=> find("태그이름")
 						$(data).find("product").each(function() {	//	여러개 => for문
-							let name = $(this).attr("name");	//	속성가져오기 => attr()
+							let company = $(this).text();
+							let name = $(this).attr("name");
 							let count = $(this).attr("count");
 							table += "<tr>" ;
+							table += `<td>${company}</td>` ;
 							table += `<td>${name}</td>` ;
 							table += `<td>${count}</td>` ;
 							table += "</tr>" ;

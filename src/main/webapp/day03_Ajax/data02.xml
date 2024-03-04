@@ -2,7 +2,7 @@
 <products>
 	<product name="제네시스" count="5" />
 	<product name="아반떼" count="3" />
-	<product name="그랜져" count="4" />
+	<product name="그렌져" count="4" />
 	<product name="BMW" count="5" />
 	<product name="Volvo" count="2" />
 </products>
